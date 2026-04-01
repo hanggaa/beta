@@ -31,20 +31,95 @@ function updateUI() {
   document.getElementById('progressBar').style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
 }
 
-// Zoom: click diagram to enlarge
+// Zoom & Pan functionality
+let currentZoom = 1;
+let panX = 0;
+let panY = 0;
+let isPanning = false;
+let startX = 0;
+let startY = 0;
+
 function openZoom(container) {
   const img = container.querySelector('img');
   if (!img) return;
   const overlay = document.getElementById('zoomOverlay');
   const content = document.getElementById('zoomContent');
-  content.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+  content.innerHTML = `<img id="zoomedImg" src="${img.src}" alt="${img.alt}">`;
   overlay.classList.add('active');
+  
+  // Reset zoom & pan
+  currentZoom = 1;
+  panX = 0;
+  panY = 0;
+  updateZoom();
+}
+
+function updateZoom() {
+  const img = document.getElementById('zoomedImg');
+  if (!img) return;
+  img.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
+  img.style.transition = isPanning ? 'none' : 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
+}
+
+function zoomIn(e) {
+  if (e) e.stopPropagation();
+  currentZoom = Math.min(currentZoom + 0.5, 4);
+  updateZoom();
+}
+
+function zoomOut(e) {
+  if (e) e.stopPropagation();
+  currentZoom = Math.max(currentZoom - 0.5, 0.5);
+  updateZoom();
+}
+
+function zoomReset(e) {
+  if (e) e.stopPropagation();
+  currentZoom = 1;
+  panX = 0;
+  panY = 0;
+  updateZoom();
 }
 
 function closeZoom() {
   document.getElementById('zoomOverlay').classList.remove('active');
-  document.getElementById('zoomContent').innerHTML = '';
+  setTimeout(() => { document.getElementById('zoomContent').innerHTML = ''; }, 300);
 }
+
+// Panning Events
+document.addEventListener('mousedown', (e) => {
+  if (document.getElementById('zoomOverlay').classList.contains('active') && e.target.id === 'zoomedImg') {
+    isPanning = true;
+    startX = e.clientX - panX;
+    startY = e.clientY - panY;
+    e.target.style.cursor = 'grabbing';
+    e.preventDefault();
+  }
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isPanning) return;
+  panX = e.clientX - startX;
+  panY = e.clientY - startY;
+  updateZoom();
+});
+
+document.addEventListener('mouseup', () => {
+  if (isPanning) {
+    isPanning = false;
+    const img = document.getElementById('zoomedImg');
+    if (img) img.style.cursor = 'grab';
+  }
+});
+
+// Mouse wheel zoom
+document.getElementById('zoomOverlay').addEventListener('wheel', (e) => {
+  if (document.getElementById('zoomOverlay').classList.contains('active')) {
+    e.preventDefault();
+    if (e.deltaY < 0) zoomIn();
+    else zoomOut();
+  }
+}, { passive: false });
 
 // Keyboard
 document.addEventListener('keydown', (e) => {

@@ -362,9 +362,14 @@
 
   <!-- Diagram Zoom Overlay -->
   <div class="zoom-overlay" id="zoomOverlay">
+    <div class="zoom-controls">
+      <button class="zoom-btn" onclick="zoomOut(event)">−</button>
+      <button class="zoom-btn" onclick="zoomReset(event)" style="font-size: 0.9rem;">1:1</button>
+      <button class="zoom-btn" onclick="zoomIn(event)">+</button>
+    </div>
     <button class="zoom-close" onclick="closeZoom()">✕</button>
     <div class="zoom-content" id="zoomContent"></div>
-    <div class="zoom-hint">Klik di luar diagram atau tekan Esc untuk menutup</div>
+    <div class="zoom-hint">Klik di luar diagram atau tekan Esc untuk menutup. Scroll atau Drag untuk navigasi.</div>
   </div>
 
   <script src="flow-deck.js"></script>
