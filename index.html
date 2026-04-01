@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="progress-bar" id="progressBar"></div>
-  <div class="slide-counter" id="slideCounter">1 / 12</div>
+  <div class="slide-counter" id="slideCounter">1 / 13</div>
   <nav class="nav-arrows">
     <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">‹</button>
     <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">›</button>
@@ -439,8 +439,34 @@
     </div>
   </section>
 
-  <!-- SLIDE 12: Closing -->
+  <!-- SLIDE 12: Gallery -->
   <section class="slide" id="slide-11">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW DIAGRAMS</div>
+      <h2>Gallery <span class="accent">Diagram</span></h2>
+      <div class="carousel">
+        <button class="car-nav car-prev" onclick="event.stopPropagation();navCar(-1)">‹</button>
+        <div class="car-stage">
+          <div class="car-img-wrap" onclick="openLb(currentCar)">
+            <img id="carImg" src="1. Entitas &amp; Relasi.png" alt="">
+          </div>
+        </div>
+        <button class="car-nav car-next" onclick="event.stopPropagation();navCar(1)">›</button>
+      </div>
+      <div class="car-info">
+        <div class="car-title-bar">
+          <span class="car-num" id="carNum">1</span>
+          <span class="car-name" id="carName">Entitas &amp; Relasi</span>
+        </div>
+        <div class="car-counter" id="carCounter">1 / 9</div>
+      </div>
+      <div class="car-dots" id="carDots"></div>
+      <div style="text-align:center;margin-top:8px;font-size:.72rem;color:var(--text3)">Klik gambar untuk memperbesar · Gunakan ← → untuk navigasi</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: Closing -->
+  <section class="slide" id="slide-12">
     <div class="slide-inner cover-slide">
       <div class="cover-badge">SUMMARY</div>
       <h1 class="cover-title" style="font-size:2.8rem">Business Flow<br><span class="accent">Complete</span></h1>
@@ -466,6 +492,16 @@
       <p class="cover-footer">Fintech1000s — Receivables Financing Business Flow</p>
     </div>
   </section>
+
+  <!-- Lightbox Overlay -->
+  <div class="lb-overlay" id="lbOverlay">
+    <button class="lb-close" onclick="closeLb()">✕</button>
+    <button class="lb-nav lb-prev" onclick="event.stopPropagation();navLb(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="event.stopPropagation();navLb(1)">›</button>
+    <div class="lb-title" id="lbTitle"></div>
+    <div class="lb-img-wrap"><img id="lbImg" src="" alt=""></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
 
   <script src="flow-deck.js"></script>
 </body>
