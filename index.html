@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fintech1000s — Business Flow Deck</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="flow-deck.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="slide-counter" id="slideCounter">1 / 12</div>
+  <nav class="nav-arrows">
+    <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">‹</button>
+    <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">›</button>
+  </nav>
+
+  <!-- SLIDE 1: Cover -->
+  <section class="slide active" id="slide-0">
+    <div class="slide-inner cover-slide">
+      <div class="cover-badge">BUSINESS FLOW DOCUMENT</div>
+      <h1 class="cover-title">Fintech<span class="accent">1000s</span></h1>
+      <p class="cover-subtitle">Receivables Financing — Business Flow</p>
+      <div class="cover-divider"></div>
+      <p class="cover-desc">Alur bisnis lengkap: transaksi Mitra1000s,<br>perpanjangan tempo, cicilan, dan settlement</p>
+      <div class="cover-meta">
+        <span class="meta-chip">🏪 Merchant</span>
+        <span class="meta-chip">🏢 Selling Agent</span>
+        <span class="meta-chip">🏛️ Perusahaan</span>
+        <span class="meta-chip">🏭 Supplier</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: Entities -->
+  <section class="slide" id="slide-1">
+    <div class="slide-inner">
+      <div class="slide-label">ENTITAS</div>
+      <h2>Empat Pihak dalam <span class="accent">Ekosistem</span></h2>
+      <div class="entities-row">
+        <div class="entity-card ec-supplier">
+          <div class="entity-emoji">🏭</div>
+          <h3>Supplier</h3>
+          <p>Pemasok bahan bangunan</p>
+          <div class="entity-detail">Mengatur durasi tempo di Mitra1000s<br>(contoh: 45 hari)</div>
+        </div>
+        <div class="entity-arrow">→</div>
+        <div class="entity-card ec-agent">
+          <div class="entity-emoji">🏢</div>
+          <h3>Selling Agent</h3>
+          <p>Distributor / Kreditur</p>
+          <div class="entity-detail">Memiliki plafon di perusahaan<br>(contoh: Rp 100 Juta)</div>
+        </div>
+        <div class="entity-arrow">→</div>
+        <div class="entity-card ec-company">
+          <div class="entity-emoji">🏛️</div>
+          <h3>Perusahaan</h3>
+          <p>Pemilik Platform</p>
+          <div class="entity-detail">Pengelola Mitra1000s &<br>Fintech1000s</div>
+        </div>
+        <div class="entity-arrow">→</div>
+        <div class="entity-card ec-merchant">
+          <div class="entity-emoji">🏪</div>
+          <h3>Merchant</h3>
+          <p>Toko Bangunan (Customer)</p>
+          <div class="entity-detail">Membeli bahan bangunan<br>untuk dijual ke end-customer</div>
+        </div>
+      </div>
+      <div class="money-flow">
+        <div class="mf-label">💰 Alur Uang</div>
+        <div class="mf-chain">
+          <span class="mf-actor mf-mer">Merchant</span>
+          <span class="mf-arrow">→ bayar via VA →</span>
+          <span class="mf-actor mf-co">Perusahaan</span>
+          <span class="mf-arrow">→ transfer →</span>
+          <span class="mf-actor mf-sa">Selling Agent</span>
+          <span class="mf-arrow">→ di hari ke-45 →</span>
+          <span class="mf-actor mf-sup">Supplier</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: Flow Normal -->
+  <section class="slide" id="slide-2">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW 1 — ALUR NORMAL</div>
+      <h2>Transaksi Mitra1000s <span class="accent">Tanpa Kendala</span></h2>
+      <div class="swimlane">
+        <div class="swim-header">
+          <div class="swim-col sc-mer">🏪 Merchant</div>
+          <div class="swim-col sc-sys">📱 Mitra1000s</div>
+          <div class="swim-col sc-sa">🏢 Selling Agent</div>
+          <div class="swim-col sc-sup">🏭 Supplier</div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"><div class="swim-action sa-active">Beli 100 Tang<br>Rp 100 Jt (Tempo)</div></div>
+          <div class="swim-cell sc-sys"><div class="swim-action">Kirim data ke SA</div></div>
+          <div class="swim-cell sc-sa"><div class="swim-action sa-approve">✅ Approve</div></div>
+          <div class="swim-cell sc-sup"></div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"></div>
+          <div class="swim-cell sc-sys"><div class="swim-action">Buat Invoice Piutang<br>Tempo: 45 hari</div></div>
+          <div class="swim-cell sc-sa"></div>
+          <div class="swim-cell sc-sup"><div class="swim-action sa-active">📦 Kirim barang</div></div>
+        </div>
+        <div class="swim-divider"><span>⏳ Hari ke-15</span></div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"><div class="swim-action sa-pay">💳 Bayar via VA</div></div>
+          <div class="swim-cell sc-sys"><div class="swim-action">Verifikasi → Perusahaan</div></div>
+          <div class="swim-cell sc-sa"><div class="swim-action">Terima transfer</div></div>
+          <div class="swim-cell sc-sup"></div>
+        </div>
+        <div class="swim-divider"><span>⏳ Hari ke-45</span></div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"></div>
+          <div class="swim-cell sc-sys"></div>
+          <div class="swim-cell sc-sa"><div class="swim-action sa-pay">Transfer ke Supplier</div></div>
+          <div class="swim-cell sc-sup"><div class="swim-action sa-done">✅ Terbayar</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: Flow Tidak Normal -->
+  <section class="slide" id="slide-3">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW 2 — ALUR TIDAK NORMAL</div>
+      <h2>Telat Bayar <span class="accent-red">Tanpa Fintech1000s</span></h2>
+      <div class="swimlane">
+        <div class="swim-header">
+          <div class="swim-col sc-mer">🏪 Merchant</div>
+          <div class="swim-col sc-sys">📱 Mitra1000s</div>
+          <div class="swim-col sc-sa">🏢 Selling Agent</div>
+          <div class="swim-col sc-sup">🏭 Supplier</div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"><div class="swim-action sa-active">Beli 100 Tang<br>Rp 100 Jt (Tempo)</div></div>
+          <div class="swim-cell sc-sys"><div class="swim-action">✅ SA Approve → Invoice</div></div>
+          <div class="swim-cell sc-sa"></div>
+          <div class="swim-cell sc-sup"><div class="swim-action sa-active">📦 Kirim barang</div></div>
+        </div>
+        <div class="swim-divider swim-divider-danger"><span>⚠️ Hari ke-45 — JATUH TEMPO</span></div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"><div class="swim-action sa-danger">❌ Belum bayar<br>Akun DIBLOKIR</div></div>
+          <div class="swim-cell sc-sys"><div class="swim-action sa-danger">🔒 Blokir akun</div></div>
+          <div class="swim-cell sc-sa"><div class="swim-action sa-danger">💸 NALANGI bayar<br>ke Supplier</div></div>
+          <div class="swim-cell sc-sup"><div class="swim-action">Terima talangan</div></div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"></div>
+          <div class="swim-cell sc-sys"></div>
+          <div class="swim-cell sc-sa"><div class="swim-action sa-warn">📞 Tagih MANUAL<br>offline di lapangan</div></div>
+          <div class="swim-cell sc-sup"></div>
+        </div>
+        <div class="swim-divider"><span>⏳ Hari ke-50</span></div>
+        <div class="swim-row">
+          <div class="swim-cell sc-mer"><div class="swim-action sa-pay">💳 Akhirnya bayar</div></div>
+          <div class="swim-cell sc-sys"><div class="swim-action">→ Perusahaan</div></div>
+          <div class="swim-cell sc-sa"><div class="swim-action">Dapat uang kembali</div></div>
+          <div class="swim-cell sc-sup"></div>
+        </div>
+      </div>
+      <div class="problems-bar">
+        <div class="prob-item">💸 SA nalangi sendiri</div>
+        <div class="prob-item">📞 Tagih manual offline</div>
+        <div class="prob-item">🔒 Merchant terblokir</div>
+        <div class="prob-item">⚠️ Tidak ada bunga/penalti</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: Fintech1000s Solution Intro -->
+  <section class="slide" id="slide-4">
+    <div class="slide-inner cover-slide">
+      <div class="cover-badge" style="background:rgba(59,130,246,0.15);border-color:rgba(59,130,246,0.3)">SOLUSI</div>
+      <h1 class="cover-title" style="font-size:3.2rem">Fintech<span class="accent">1000s</span></h1>
+      <div class="cover-divider"></div>
+      <p class="cover-desc" style="font-size:1.15rem;max-width:700px;margin:0 auto 36px">
+        Merchant yang <strong>belum sanggup bayar</strong> sebelum jatuh tempo<br>
+        bisa mengajukan <strong>perpanjangan tempo</strong> via Fintech1000s.<br>
+        Selling Agent yang menyetujui = memberikan <strong>credit limit</strong>.
+      </p>
+      <div class="solution-steps">
+        <div class="ss-item"><div class="ss-num">1</div><div class="ss-text">Merchant ajukan<br>perpanjangan di Fintech1000s</div></div>
+        <div class="ss-arrow">→</div>
+        <div class="ss-item"><div class="ss-num">2</div><div class="ss-text">Selling Agent<br>approve / reject</div></div>
+        <div class="ss-arrow">→</div>
+        <div class="ss-item"><div class="ss-num">3</div><div class="ss-text">Invoice lama restructured<br>Invoice baru + bunga</div></div>
+        <div class="ss-arrow">→</div>
+        <div class="ss-item"><div class="ss-num">4</div><div class="ss-text">Merchant cicil<br>mingguan via VA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: Fintech Flow Swimlane -->
+  <section class="slide" id="slide-5">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW 3 — FINTECH1000S</div>
+      <h2>Perpanjangan Tempo + <span class="accent">Cicilan</span></h2>
+      <div class="swimlane swimlane-compact">
+        <div class="swim-header">
+          <div class="swim-col sc-mer">🏪 Merchant</div>
+          <div class="swim-col sc-ft">📱 Fintech1000s</div>
+          <div class="swim-col sc-sa">🏢 Selling Agent</div>
+          <div class="swim-col sc-co">🏛️ Perusahaan</div>
+        </div>
+        <div class="swim-phase">FASE 1 — Transaksi Mitra1000s (seperti biasa)</div>
+        <div class="swim-row">
+          <div class="swim-cell"><div class="swim-action sa-active">Beli bahan bangunan<br>Tempo 45 hari</div></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"><div class="swim-action sa-approve">✅ Approve</div></div>
+          <div class="swim-cell"></div>
+        </div>
+        <div class="swim-phase swim-phase-blue">FASE 2 — Perpanjangan via Fintech1000s</div>
+        <div class="swim-row">
+          <div class="swim-cell"><div class="swim-action sa-warn">⚠️ Hari ke-31<br>Belum sanggup bayar</div></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"></div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell"><div class="swim-action sa-active">📱 Ajukan +21 hari</div></div>
+          <div class="swim-cell"><div class="swim-action">Kirim ke SA</div></div>
+          <div class="swim-cell"><div class="swim-action sa-approve">✅ Approve</div></div>
+          <div class="swim-cell"></div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell"></div>
+          <div class="swim-cell"><div class="swim-action sa-invoice">📄 Restructure invoice<br>Buat invoice baru<br>+ interest</div></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"></div>
+        </div>
+        <div class="swim-phase swim-phase-purple">FASE 3 — Cicilan Mingguan</div>
+        <div class="swim-row">
+          <div class="swim-cell"><div class="swim-action sa-pay">Mg-1: Cicil Rp 33 Jt</div></div>
+          <div class="swim-cell"><div class="swim-action">💳 VA</div></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"><div class="swim-action">💵 → SA</div></div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell"><div class="swim-action sa-pay">Mg-2: Cicil Rp 33 Jt</div></div>
+          <div class="swim-cell"><div class="swim-action">💳 VA</div></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"><div class="swim-action">💵 → SA</div></div>
+        </div>
+        <div class="swim-row">
+          <div class="swim-cell"><div class="swim-action sa-done">Mg-3: Sisa Rp 34 Jt<br>+ Bunga Rp 502.500</div></div>
+          <div class="swim-cell"><div class="swim-action">💳 VA</div></div>
+          <div class="swim-cell"></div>
+          <div class="swim-cell"><div class="swim-action sa-done">✅ Lunas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: Interest Table -->
+  <section class="slide" id="slide-6">
+    <div class="slide-inner">
+      <div class="slide-label">SKEMA BUNGA</div>
+      <h2>Penambahan <span class="accent">0.25% per 7 Hari</span></h2>
+      <div class="interest-grid">
+        <div class="int-card"><div class="int-days">7</div><div class="int-lbl">HARI</div><div class="int-rate">0.25%</div></div>
+        <div class="int-card"><div class="int-days">14</div><div class="int-lbl">HARI</div><div class="int-rate">0.50%</div></div>
+        <div class="int-card"><div class="int-days">21</div><div class="int-lbl">HARI</div><div class="int-rate">0.75%</div></div>
+        <div class="int-card"><div class="int-days">28</div><div class="int-lbl">HARI</div><div class="int-rate">1.00%</div></div>
+        <div class="int-card"><div class="int-days">35</div><div class="int-lbl">HARI</div><div class="int-rate">1.25%</div></div>
+        <div class="int-card"><div class="int-days">42</div><div class="int-lbl">HARI</div><div class="int-rate">1.50%</div></div>
+        <div class="int-card"><div class="int-days">49</div><div class="int-lbl">HARI</div><div class="int-rate">1.75%</div></div>
+        <div class="int-card"><div class="int-days">56</div><div class="int-lbl">HARI</div><div class="int-rate">2.00%</div></div>
+      </div>
+      <div class="int-rules">
+        <div class="int-rule"><span class="ir-icon">📐</span><span>Bunga dihitung dari <strong>sisa pokok</strong> di minggu tersebut (bukan dari total awal)</span></div>
+        <div class="int-rule"><span class="ir-icon">📅</span><span>Cicilan pokok <strong>bebas ditentukan</strong> Merchant setiap minggu</span></div>
+        <div class="int-rule"><span class="ir-icon">💰</span><span>Bunga <strong>dikumulasikan</strong> dan dibayar di <strong>minggu terakhir</strong> bersama sisa pokok</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: Calculation Example -->
+  <section class="slide" id="slide-7">
+    <div class="slide-inner">
+      <div class="slide-label">CONTOH KALKULASI</div>
+      <h2>Perpanjangan <span class="accent">21 Hari</span> — Pokok Rp 100 Juta</h2>
+      <table class="calc-table">
+        <thead>
+          <tr><th>Minggu</th><th>Sisa Pokok</th><th>Bunga (0.25%)</th><th>Cicilan Pokok</th><th>Yang Dibayar</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="week-badge">1</span></td>
+            <td>Rp 100.000.000</td>
+            <td class="text-orange">Rp 250.000</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+          </tr>
+          <tr>
+            <td><span class="week-badge">2</span></td>
+            <td>Rp 67.000.000</td>
+            <td class="text-orange">Rp 167.500</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+          </tr>
+          <tr class="row-final">
+            <td><span class="week-badge wb-green">3</span></td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 85.000</td>
+            <td>Rp 34.000.000</td>
+            <td class="text-green text-bold">Rp 34.502.500</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-summary">
+        <div class="cs-item"><div class="cs-label">Total Pokok</div><div class="cs-value">Rp 100.000.000</div></div>
+        <div class="cs-plus">+</div>
+        <div class="cs-item cs-orange"><div class="cs-label">Kumulatif Bunga</div><div class="cs-value">Rp 502.500</div></div>
+        <div class="cs-plus">=</div>
+        <div class="cs-item cs-green"><div class="cs-label">Total Dibayar</div><div class="cs-value">Rp 100.502.500</div></div>
+      </div>
+      <div class="calc-note">Minggu 1 & 2: hanya bayar cicilan pokok · Minggu 3 (terakhir): sisa pokok + seluruh kumulatif bunga</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: Re-Extension -->
+  <section class="slide" id="slide-8">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW 4 — RE-EXTENSION</div>
+      <h2>Perpanjangan Tempo <span class="accent-orange">Berulang</span></h2>
+      <div class="reext-flow">
+        <div class="reext-phase rp-blue">
+          <div class="rp-header">🔵 Perpanjangan Tempo KE-1 (+21 hari)</div>
+          <div class="rp-steps">
+            <div class="rp-step">Merchant ajukan +21 hari → SA Approve → Invoice restructured</div>
+            <div class="rp-step">Mg-1: Cicil <strong>Rp 33 Jt</strong> (sisa: Rp 67 Jt)</div>
+            <div class="rp-step">Mg-2: Cicil <strong>Rp 33 Jt</strong> (sisa: Rp 34 Jt)</div>
+            <div class="rp-step rp-warn">⚠️ Mg-3: Belum sanggup lunasi sisa Rp 34 Jt</div>
+          </div>
+        </div>
+        <div class="reext-arrow">↓ Ajukan perpanjangan LAGI</div>
+        <div class="reext-phase rp-orange">
+          <div class="rp-header">🟠 Perpanjangan Tempo KE-2 (+21 hari, sisa pokok Rp 34 Jt)</div>
+          <div class="rp-steps">
+            <div class="rp-step">SA Approve lagi → Invoice restructured dari sisa Rp 34 Jt</div>
+            <div class="rp-step">Mg-1 baru: Cicil <strong>Rp 10 Jt</strong> (sisa: Rp 24 Jt)</div>
+            <div class="rp-step">Mg-2 baru: Cicil <strong>Rp 10 Jt</strong> (sisa: Rp 14 Jt)</div>
+            <div class="rp-step">Mg-3 baru: Cicil <strong>Rp 10 Jt</strong> (sisa: Rp 4 Jt)</div>
+            <div class="rp-step rp-done">✅ Mg-4 baru: Bayar sisa <strong>Rp 4 Jt</strong> + kumulatif bunga <strong>Rp 607.500</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="reext-total">
+        <span class="rt-label">Total seluruh pembayaran:</span>
+        <span class="rt-value">Rp 100.607.500</span>
+        <span class="rt-detail">(Pokok Rp 100 Jt + Bunga Rp 607.500)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: Key Rules -->
+  <section class="slide" id="slide-9">
+    <div class="slide-inner">
+      <div class="slide-label">ATURAN BISNIS</div>
+      <h2>Informasi <span class="accent">Penting</span></h2>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-icon">🏢</div>
+          <h3>Plafon Selling Agent</h3>
+          <p>Setiap Selling Agent memiliki <strong>plafon</strong> di perusahaan untuk menjadi distributor di Mitra1000s</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">⏳</div>
+          <h3>Tempo dari Supplier</h3>
+          <p>Supplier yang mengatur durasi tempo di Mitra1000s (contoh: <strong>45 hari</strong>)</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">✅</div>
+          <h3>Approve = Credit Limit</h3>
+          <p>SA menyetujui perpanjangan = memberikan <strong>credit limit</strong> ke Merchant</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">📄</div>
+          <h3>Invoice Restructure</h3>
+          <p>Invoice lama <strong>digantikan</strong>, sistem buat invoice baru dengan interest</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">🚫</div>
+          <h3>Belum Ada Penalti</h3>
+          <p>Saat ini tidak ada penalti keterlambatan di Mitra1000s (menghindari kerumitan invoice baru)</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">🔄</div>
+          <h3>Re-Extension</h3>
+          <p>Merchant bisa ajukan perpanjangan <strong>berulang</strong>, selama SA approve</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: Money Flow -->
+  <section class="slide" id="slide-10">
+    <div class="slide-inner">
+      <div class="slide-label">ALUR UANG</div>
+      <h2>Settlement <span class="accent">Flow</span></h2>
+      <div class="money-visual">
+        <div class="mv-step mv-mer">
+          <div class="mv-emoji">🏪</div>
+          <div class="mv-name">Merchant</div>
+          <div class="mv-desc">Bayar cicilan pokok<br>(+ bunga di akhir)</div>
+        </div>
+        <div class="mv-connector">
+          <div class="mv-arrow-line"></div>
+          <div class="mv-arrow-label">VA + Kode Billing</div>
+        </div>
+        <div class="mv-step mv-ft">
+          <div class="mv-emoji">📱</div>
+          <div class="mv-name">Fintech1000s</div>
+          <div class="mv-desc">Verifikasi<br>pembayaran</div>
+        </div>
+        <div class="mv-connector">
+          <div class="mv-arrow-line"></div>
+          <div class="mv-arrow-label">Auto transfer</div>
+        </div>
+        <div class="mv-step mv-co">
+          <div class="mv-emoji">🏛️</div>
+          <div class="mv-name">Perusahaan</div>
+          <div class="mv-desc">Terima uang<br>sebagai middleman</div>
+        </div>
+        <div class="mv-connector">
+          <div class="mv-arrow-line"></div>
+          <div class="mv-arrow-label">Transfer cicilan</div>
+        </div>
+        <div class="mv-step mv-sa">
+          <div class="mv-emoji">🏢</div>
+          <div class="mv-name">Selling Agent</div>
+          <div class="mv-desc">Terima pembayaran<br>(as kreditur)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: Closing -->
+  <section class="slide" id="slide-11">
+    <div class="slide-inner cover-slide">
+      <div class="cover-badge">SUMMARY</div>
+      <h1 class="cover-title" style="font-size:2.8rem">Business Flow<br><span class="accent">Complete</span></h1>
+      <div class="cover-divider"></div>
+      <div class="closing-grid">
+        <div class="cg-item">
+          <div class="cg-num">4</div>
+          <div class="cg-label">Entitas</div>
+        </div>
+        <div class="cg-item">
+          <div class="cg-num">4</div>
+          <div class="cg-label">Skenario Flow</div>
+        </div>
+        <div class="cg-item">
+          <div class="cg-num">0.25%</div>
+          <div class="cg-label">Bunga / 7 hari</div>
+        </div>
+        <div class="cg-item">
+          <div class="cg-num">56</div>
+          <div class="cg-label">Hari maks perpanjangan</div>
+        </div>
+      </div>
+      <p class="cover-footer">Fintech1000s — Receivables Financing Business Flow</p>
+    </div>
+  </section>
+
+  <script src="flow-deck.js"></script>
+</body>
+</html>
