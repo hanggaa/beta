@@ -12,7 +12,7 @@
 
 <body>
   <div class="progress-bar" id="progressBar"></div>
-  <div class="slide-counter" id="slideCounter">1 / 13</div>
+  <div class="slide-counter" id="slideCounter">1 / 18</div>
   <nav class="nav-arrows">
     <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">‹</button>
     <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">›</button>
@@ -25,8 +25,8 @@
       <h1 class="cover-title">Fintech<span class="accent">1000s</span></h1>
       <p class="cover-subtitle">Receivables Financing — Business Flow</p>
       <div class="cover-divider"></div>
-      <p class="cover-desc">Alur bisnis lengkap: transaksi Mitra1000s,<br>perpanjangan tempo, cicilan, dan settlement
-      </p>
+      <p class="cover-desc">Alur bisnis lengkap: transaksi Mitra1000s,<br>Limit Kredit, restrukturisasi otomatis, dan
+        settlement</p>
       <div class="cover-meta">
         <span class="meta-chip">🏪 Merchant</span>
         <span class="meta-chip">🏢 Selling Agent</span>
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="money-flow">
-        <div class="mf-label">💰 Alur Uang</div>
+        <div class="mf-label">💰 Alur Reguler</div>
         <div class="mf-chain">
           <span class="mf-actor mf-mer">Merchant</span>
           <span class="mf-arrow">→ bayar via VA →</span>
@@ -85,24 +85,24 @@
     </div>
   </section>
 
-  <!-- SLIDE 3: Flow Normal (PNG) -->
+  <!-- SLIDE 3: Flow Normal -->
   <section class="slide" id="slide-2">
     <div class="slide-inner">
       <div class="slide-label">FLOW 1 — ALUR NORMAL</div>
       <h2>Transaksi Mitra1000s <span class="accent">Tanpa Kendala</span></h2>
       <div class="diagram-container" onclick="openZoom(this)">
-        <img src="6. Alur Normal (Tidak Ada Keterlambatan).png" alt="Alur Normal Mitra1000s">
+        <img src="alur_normal.png" alt="Alur Normal">
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 4: Flow Tidak Normal (PNG) -->
+  <!-- SLIDE 4: Flow Tidak Normal -->
   <section class="slide" id="slide-3">
     <div class="slide-inner">
       <div class="slide-label">FLOW 2 — ALUR TIDAK NORMAL</div>
       <h2>Telat Bayar <span class="accent-red">Tanpa Fintech1000s</span></h2>
       <div class="diagram-container" onclick="openZoom(this)">
-        <img src="7. Alur Tidak Normal (TANPA Fintech1000s).png" alt="Alur Tidak Normal">
+        <img src="alur_tidak_normal.png" alt="Alur Tidak Normal">
       </div>
     </div>
   </section>
@@ -113,25 +113,25 @@
       <div class="cover-badge" style="background:rgba(59,130,246,0.15);border-color:rgba(59,130,246,0.3)">SOLUSI</div>
       <h1 class="cover-title" style="font-size:3.2rem">Fintech<span class="accent">1000s</span></h1>
       <div class="cover-divider"></div>
-      <p class="cover-desc" style="font-size:1.15rem;max-width:700px;margin:0 auto 36px">
-        Merchant yang <strong>belum sanggup bayar</strong> sebelum jatuh tempo<br>
-        bisa mengajukan <strong>perpanjangan tempo</strong> via Fintech1000s.<br>
-        Selling Agent yang menyetujui = memberikan <strong>credit limit</strong>.
+      <p class="cover-desc" style="font-size:1.15rem;max-width:750px;margin:0 auto 36px">
+        Saat akun Merchant <strong>terblokir</strong> karena telat bayar, Merchant bisa<br>
+        mengajukan <strong>fasilitas kredit</strong> via Fintech1000s agar bisa transaksi stok lagi.<br>
+        Selling Agent akan mereview dan memberi <strong>Credit Limit</strong>.
       </p>
       <div class="solution-steps">
         <div class="ss-item">
           <div class="ss-num">1</div>
-          <div class="ss-text">Merchant ajukan<br>perpanjangan di Fintech1000s</div>
+          <div class="ss-text">Merchant ajukan<br>Akun. SA set Credit Limit</div>
         </div>
         <div class="ss-arrow">→</div>
         <div class="ss-item">
           <div class="ss-num">2</div>
-          <div class="ss-text">Selling Agent<br>approve / reject</div>
+          <div class="ss-text">Validasi Limit.<br>Bayar parsial (Jika perlu)</div>
         </div>
         <div class="ss-arrow">→</div>
         <div class="ss-item">
           <div class="ss-num">3</div>
-          <div class="ss-text">Invoice lama restructured<br>Invoice baru + bunga</div>
+          <div class="ss-text">Auto-Approve<br>Perpanjangan Tempo</div>
         </div>
         <div class="ss-arrow">→</div>
         <div class="ss-item">
@@ -140,229 +140,382 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
-  <!-- SLIDE 6: Fintech Flow (PNG) -->
+  <!-- SLIDE 6: Pembukaan Akun Kredit -->
   <section class="slide" id="slide-5">
     <div class="slide-inner">
-      <div class="slide-label">FLOW 3 — FINTECH1000S</div>
-      <h2>Perpanjangan Tempo + <span class="accent">Cicilan</span></h2>
+      <div class="slide-label">FASE 1-3 (PENDAFTARAN)</div>
+      <h2>Pengajuan & <span class="accent">Auto-Approve</span></h2>
       <div class="diagram-container" onclick="openZoom(this)">
-        <img src="8. Solusi Fintech1000s (Perpanjangan Tempo + Cicilan).png" alt="Solusi Fintech1000s">
+        <img src="pembukaan_akun_kredit.png" alt="Pembukaan Akun Kredit">
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 7: Re-Extension (PNG) -->
+  <!-- SLIDE 7: Fintech Flow Skema Lama Tanpa Skip -->
   <section class="slide" id="slide-6">
     <div class="slide-inner">
-      <div class="slide-label">FLOW 4 — RE-EXTENSION</div>
-      <h2>Perpanjangan Tempo <span class="accent-orange">Berulang</span></h2>
+      <div class="slide-label">FLOW 3 — SKEMA PERTAMA (KUMULATIF DI AKHIR)</div>
+      <h2>Solusi <span class="accent">Utama</span> (TANPA SKIP PAYMENT)</h2>
       <div class="diagram-container" onclick="openZoom(this)">
-        <img src="9. Fintech1000s Re-Extension (Perpanjang Tempo Berulang).png" alt="Re-Extension">
+        <img src="skema_lama_tanpa_skip.png" alt="Skema Lama Tanpa Skip">
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 8: Interest Table -->
+  <!-- SLIDE 7: Fintech Flow Skema Lama Dengan Skip -->
+  <section class="slide" id="slide-6">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW 3 — SKEMA PERTAMA (KUMULATIF DI AKHIR)</div>
+      <h2>Solusi <span class="accent-red">Utama</span> (DENGAN SKIP PAYMENT M-2)</h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="skema_lama_dengan_skip.png" alt="Skema Lama Dengan Skip">
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: Fintech Flow Skema Baru Tanpa Skip -->
   <section class="slide" id="slide-7">
     <div class="slide-inner">
+      <div class="slide-label">FLOW 4 — SKEMA KEDUA (PAY-AS-YOU-GO)</div>
+      <h2>Opsi <span class="accent-orange">Inovatif</span> (TANPA SKIP PAYMENT)</h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="skema_baru_tanpa_skip.png" alt="Skema Baru Tanpa Skip">
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: Fintech Flow Skema Baru Dengan Skip -->
+  <section class="slide" id="slide-8">
+    <div class="slide-inner">
+      <div class="slide-label">FLOW 4 — SKEMA KEDUA (PAY-AS-YOU-GO)</div>
+      <h2>Opsi <span class="accent-orange">Inovatif</span> (DENGAN SKIP PAYMENT M-2)</h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="skema_baru_dengan_skip.png" alt="Skema Baru Dengan Skip">
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: Interest Table -->
+  <section class="slide" id="slide-9">
+    <div class="slide-inner">
       <div class="slide-label">SKEMA BUNGA</div>
-      <h2>Penambahan <span class="accent">0.25% per 7 Hari</span></h2>
+      <h2>Rate Increment: <span class="accent">0.25% per 7 Hari</span></h2>
       <div class="interest-grid">
         <div class="int-card">
           <div class="int-days">7</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M1)</div>
           <div class="int-rate">0.25%</div>
         </div>
         <div class="int-card">
           <div class="int-days">14</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M2)</div>
           <div class="int-rate">0.50%</div>
         </div>
         <div class="int-card">
           <div class="int-days">21</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M3)</div>
           <div class="int-rate">0.75%</div>
         </div>
         <div class="int-card">
           <div class="int-days">28</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M4)</div>
           <div class="int-rate">1.00%</div>
         </div>
         <div class="int-card">
           <div class="int-days">35</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M5)</div>
           <div class="int-rate">1.25%</div>
         </div>
         <div class="int-card">
           <div class="int-days">42</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M6)</div>
           <div class="int-rate">1.50%</div>
         </div>
         <div class="int-card">
           <div class="int-days">49</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M7)</div>
           <div class="int-rate">1.75%</div>
         </div>
         <div class="int-card">
           <div class="int-days">56</div>
-          <div class="int-lbl">HARI</div>
+          <div class="int-lbl">HARI (M8)</div>
           <div class="int-rate">2.00%</div>
         </div>
       </div>
       <div class="int-rules">
-        <div class="int-rule"><span class="ir-icon">📐</span><span>Bunga dihitung dari <strong>sisa pokok</strong> di
-            minggu tersebut (bukan dari total awal)</span></div>
-        <div class="int-rule"><span class="ir-icon">📅</span><span>Cicilan pokok <strong>bebas ditentukan</strong>
-            Merchant setiap minggu</span></div>
-        <div class="int-rule"><span class="ir-icon">💰</span><span>Bunga <strong>dikumulasikan</strong> dan dibayar di
-            <strong>minggu terakhir</strong> bersama sisa pokok</span></div>
+        <div class="int-rule"><span class="ir-icon">📐</span><span>Bunga Default: Dihitung dari <strong>sisa pokok
+              utang</strong> di
+            minggu tersebut.</span></div>
+        <div class="int-rule"><span class="ir-icon">🌟</span><span>Bunga Pay-As-You-Go (Opsi): Dihitung dari
+            <strong>Pokok yang dibayar saat itu</strong>, dengan pengali eskalasi minggu.</span></div>
+        <div class="int-rule"><span class="ir-icon">📅</span><span>Merchant diberi kebebasan perpanjangan otomatis
+            selama <strong>Credit Limit</strong> tersedia.</span></div>
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 9: Calculation Example -->
-  <section class="slide" id="slide-8">
+  <!-- SLIDE 11: Skenario 1 -->
+  <section class="slide" id="slide-10">
     <div class="slide-inner">
-      <div class="slide-label">CONTOH KALKULASI</div>
-      <h2>Perpanjangan <span class="accent">21 Hari</span> — Pokok Rp 100 Juta</h2>
+      <div class="slide-label">SKENARIO 1 (TANPA SKIP)</div>
+      <h2>Tepat Waktu — <span class="accent">Skema Pertama</span> (Kumulatif Akhir)</h2>
       <table class="calc-table">
         <thead>
           <tr>
             <th>Minggu</th>
-            <th>Sisa Pokok</th>
-            <th>Bunga (0.25%)</th>
+            <th>Sisa Pokok Awal</th>
             <th>Cicilan Pokok</th>
-            <th>Yang Dibayar</th>
+            <th>Sisa Pokok Baru</th>
+            <th>Bunga Direcording Sistem</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><span class="week-badge">1</span></td>
             <td>Rp 100.000.000</td>
-            <td class="text-orange">Rp 250.000</td>
-            <td>Rp 33.000.000</td>
             <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 67.000.000</td>
+            <td class="text-orange">Rp 250.000</td>
           </tr>
           <tr>
             <td><span class="week-badge">2</span></td>
             <td>Rp 67.000.000</td>
-            <td class="text-orange">Rp 167.500</td>
-            <td>Rp 33.000.000</td>
             <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 167.500</td>
           </tr>
-          <tr class="row-final">
-            <td><span class="week-badge wb-green">3</span></td>
+          <tr>
+            <td><span class="week-badge">3</span></td>
             <td>Rp 34.000.000</td>
+            <td class="text-bold">Rp 24.000.000</td>
+            <td>Rp 10.000.000</td>
             <td class="text-orange">Rp 85.000</td>
-            <td>Rp 34.000.000</td>
-            <td class="text-green text-bold">Rp 34.502.500</td>
+          </tr>
+          <tr class="row-final" style="background: rgba(34,197,94,0.12)">
+            <td><span class="week-badge wb-green">4</span></td>
+            <td class="text-bold">Rp 10.000.000</td>
+            <td class="text-bold text-green">Rp 10.000.000 (Pelunasan Akhir)</td>
+            <td class="text-bold text-green">LUNAS</td>
+            <td class="text-orange">Rp 25.000</td>
           </tr>
         </tbody>
       </table>
-      <div class="calc-summary">
-        <div class="cs-item">
-          <div class="cs-label">Total Pokok</div>
-          <div class="cs-value">Rp 100.000.000</div>
-        </div>
-        <div class="cs-plus">+</div>
-        <div class="cs-item cs-orange">
-          <div class="cs-label">Kumulatif Bunga</div>
-          <div class="cs-value">Rp 502.500</div>
-        </div>
-        <div class="cs-plus">=</div>
-        <div class="cs-item cs-green">
-          <div class="cs-label">Total Dibayar</div>
-          <div class="cs-value">Rp 100.502.500</div>
+      <div class="calc-summary" style="margin-top: 15px;">
+        <div class="cs-item cs-green" style="padding: 14px 18px">
+          <div class="cs-label">Total Payment di M-4 (Pelunasan 1x Transfer VA SEKALIGUS)</div>
+          <div class="cs-value text-green">Rp 10 Jt (Sisa Pokok) + Rp 527.500 (Akumulasi Bunga) = Rp 10.527.500</div>
         </div>
       </div>
-      <div class="calc-note">Minggu 1 & 2: hanya bayar cicilan pokok · Minggu 3 (terakhir): sisa pokok + seluruh
-        kumulatif bunga</div>
-    </div>
-  </section>
-
-  <!-- SLIDE 10: Re-Extension Example -->
-  <section class="slide" id="slide-9">
-    <div class="slide-inner">
-      <div class="slide-label">FLOW 4 — RE-EXTENSION</div>
-      <h2>Perpanjangan Tempo <span class="accent-orange">Berulang</span></h2>
-      <div class="reext-flow">
-        <div class="reext-phase rp-blue">
-          <div class="rp-header">🔵 Perpanjangan Tempo KE-1 (+21 hari)</div>
-          <div class="rp-steps">
-            <div class="rp-step">Merchant ajukan +21 hari → SA Approve → Invoice restructured</div>
-            <div class="rp-step">Mg-1: Cicil <strong>Rp 33 Jt</strong> (sisa: Rp 67 Jt)</div>
-            <div class="rp-step">Mg-2: Cicil <strong>Rp 33 Jt</strong> (sisa: Rp 34 Jt)</div>
-            <div class="rp-step rp-warn">⚠️ Mg-3: Belum sanggup lunasi sisa Rp 34 Jt</div>
-          </div>
-        </div>
-        <div class="reext-arrow">↓ Ajukan perpanjangan LAGI</div>
-        <div class="reext-phase rp-orange">
-          <div class="rp-header">🟠 Perpanjangan Tempo KE-2 (+21 hari, sisa pokok Rp 34 Jt)</div>
-          <div class="rp-steps">
-            <div class="rp-step">SA Approve lagi → Invoice restructured dari sisa Rp 34 Jt</div>
-            <div class="rp-step">Mg-1 baru: Cicil <strong>Rp 10 Jt</strong> (sisa: Rp 24 Jt)</div>
-            <div class="rp-step">Mg-2 baru: Cicil <strong>Rp 10 Jt</strong> (sisa: Rp 14 Jt)</div>
-            <div class="rp-step">Mg-3 baru: Cicil <strong>Rp 10 Jt</strong> (sisa: Rp 4 Jt)</div>
-            <div class="rp-step rp-done">✅ Mg-4 baru: Bayar sisa <strong>Rp 4 Jt</strong> + kumulatif bunga <strong>Rp
-                607.500</strong></div>
-          </div>
-        </div>
-      </div>
-      <div class="reext-total">
-        <span class="rt-label">Total seluruh pembayaran:</span>
-        <span class="rt-value">Rp 100.607.500</span>
-        <span class="rt-detail">(Pokok Rp 100 Jt + Bunga Rp 607.500)</span>
+      <div class="calc-note">Pokok dilunasi dan total keranjang kumulatif bunga dibayarkan bersama-sama di Minggu Ke-4.
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 11: Key Rules -->
-  <section class="slide" id="slide-10">
+  <!-- SLIDE 12: Skenario 2 -->
+  <section class="slide" id="slide-11">
     <div class="slide-inner">
-      <div class="slide-label">ATURAN BISNIS</div>
-      <h2>Informasi <span class="accent">Penting</span></h2>
+      <div class="slide-label">SKENARIO 2 (TANPA SKIP)</div>
+      <h2>Tepat Waktu — <span class="accent-orange">Skema Kedua</span> (Pay-as-you-go)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu (Rate)</th>
+            <th>Niat Cicil Pokok</th>
+            <th>Bunga Dikenakan (Langsung Lunas)</th>
+            <th>Total Tagihan VA Saat Itu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M-1 (0.25%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 82.500</td>
+            <td class="text-bold text-green">Rp 33.082.500</td>
+          </tr>
+          <tr>
+            <td>M-2 (0.50%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 165.000</td>
+            <td class="text-bold text-green">Rp 33.165.000</td>
+          </tr>
+          <tr>
+            <td>M-3 (0.75%)</td>
+            <td>Rp 24.000.000</td>
+            <td class="text-orange">Rp 180.000</td>
+            <td class="text-bold text-green">Rp 24.180.000</td>
+          </tr>
+          <tr class="row-final">
+            <td>M-4 (1.00%)</td>
+            <td>Rp 10.000.000</td>
+            <td class="text-orange">Rp 100.000</td>
+            <td class="text-bold text-green">Rp 10.100.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-note" style="margin-top:20px; font-size:0.9rem"><strong>Insight Menarik:</strong> Total
+        keuntungan bunga yang diterima Selling Agent adalah sama persis sebesar <strong>± Rp 527.500</strong>. Namun
+        Merchant merasa lebih ringan & *stateless* karena bunga tidak menggunung jadi tagihan besar di pelunasan.</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: Skenario 3 -->
+  <section class="slide" id="slide-12">
+    <div class="slide-inner">
+      <div class="slide-label">SKENARIO 3 (DENGAN SKIP PAYMENT di M-2)</div>
+      <h2>Bolong Cicilan — <span class="accent">Skema Pertama</span> (Kumulatif Akhir)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu</th>
+            <th>Sisa Pokok Awal</th>
+            <th>Cicilan Pokok</th>
+            <th>Sisa Pokok Baru</th>
+            <th>Bunga Terekam Sistem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="week-badge">1</span></td>
+            <td>Rp 100.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 67.000.000</td>
+            <td class="text-orange">Rp 250.000</td>
+          </tr>
+          <tr style="background: rgba(239,68,68,0.06);">
+            <td><span class="week-badge" style="background: #ef4444; color:white">2</span></td>
+            <td>Rp 67.000.000</td>
+            <td class="text-bold text-red" style="color: #ef4444">Rp 0 (SKIP) ⚠️</td>
+            <td class="text-red">Rp 67.000.000</td>
+            <td class="text-orange">Rp 167.500 (Bunga mengendap besar)</td>
+          </tr>
+          <tr>
+            <td><span class="week-badge">3</span></td>
+            <td>Rp 67.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 167.500</td>
+          </tr>
+          <tr class="row-final" style="background: rgba(34,197,94,0.12)">
+            <td><span class="week-badge wb-green">4</span></td>
+            <td class="text-bold">Rp 34.000.000</td>
+            <td class="text-bold text-green">Rp 34.000.000 (Pelunasan Akhir)</td>
+            <td class="text-bold text-green">LUNAS</td>
+            <td class="text-orange">Rp 85.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-summary" style="margin-top: 15px;">
+        <div class="cs-item cs-green" style="padding: 14px 18px">
+          <div class="cs-label">Total Payment di M-4 (Pelunasan 1x Transfer VA SEKALIGUS)</div>
+          <div class="cs-value text-green">Rp 34 Jt (Sisa Pokok) + Rp 670.000 (Denda Akumulasi) = Rp 34.670.000</div>
+        </div>
+      </div>
+      <div class="calc-note">Total beban bunga karena menunggak/pokok tertahan satu minggu menjadi besar di Rp 670.000.
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: Skenario 4 -->
+  <section class="slide" id="slide-13">
+    <div class="slide-inner">
+      <div class="slide-label">SKENARIO 4 (DENGAN SKIP PAYMENT di M-2)</div>
+      <h2>Bolong Cicilan — <span class="accent-orange">Skema Kedua</span> (Pay-as-you-go)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu (Rate)</th>
+            <th>Niat Cicil Pokok</th>
+            <th>Bunga Dikenakan (Langsung Lunas)</th>
+            <th>Total Tagihan VA Saat Itu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M-1 (0.25%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 82.500</td>
+            <td class="text-bold text-green">Rp 33.082.500</td>
+          </tr>
+          <tr style="background: rgba(239,68,68,0.06);">
+            <td>M-2 (0.50%)</td>
+            <td class="text-bold text-red" style="color:#ef4444">Rp 0 (SKIP) ⚠️</td>
+            <td class="text-orange">Rp 0 (IT Sistem Diam)</td>
+            <td class="text-bold text-green">Rp 0</td>
+          </tr>
+          <tr>
+            <td>M-3 <span class="text-orange">(Rate Naik 0.75%)</span></td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 247.500</td>
+            <td class="text-bold text-green">Rp 33.247.500</td>
+          </tr>
+          <tr class="row-final">
+            <td>M-4 <span class="text-orange">(Rate Naik 1.00%)</span></td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 340.000</td>
+            <td class="text-bold text-green">Rp 34.340.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-note" style="margin-top:20px; font-size:0.9rem"><strong>The Beauty of Pay-As-You-Go:</strong>
+        Total denda bunga sama persis yakni <strong>± Rp 670.000</strong>. Hukuman Merchant yang bolong bayar langsung
+        terselesaikan natural oleh <strong>Rate Eskalasi Mingguan</strong> yang membesar, sehingga Server tidak perlu
+        memproses algoritma saldo mengendap.</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 15: Key Rules -->
+  <section class="slide" id="slide-14">
+    <div class="slide-inner">
+      <div class="slide-label">ATURAN BISNIS FINTECH1000S</div>
+      <h2>Key <span class="accent">Takeaways</span></h2>
       <div class="rules-grid">
         <div class="rule-card">
-          <div class="rule-icon">🏢</div>
-          <h3>Plafon Selling Agent</h3>
-          <p>Setiap Selling Agent memiliki <strong>plafon</strong> di PT. Mitra Seribu Saudara untuk menjadi distributor
-            di Mitra1000s
+          <div class="rule-icon">💳</div>
+          <h3>Credit Limit Requirement</h3>
+          <p>Merchant tidak bisa langsung perpanjang sebelum SA memberi <strong>Credit Limit</strong> untuk akun
+            Fintech1000s-nya.
           </p>
         </div>
         <div class="rule-card">
-          <div class="rule-icon">⏳</div>
-          <h3>Tempo dari Supplier</h3>
-          <p>Supplier yang mengatur durasi tempo di Mitra1000s (contoh: <strong>45 hari</strong>)</p>
+          <div class="rule-icon">🧮</div>
+          <h3>Partial Payment Wajib</h3>
+          <p>Jika Limit SA (Misal: 60 Jt) lebih kecil dari total piutang (Misal 100 Jt), Merchant <strong>wajib bayar
+              selisih</strong> 40 Jt dahulu untuk buka blokir Mitra1000s.</p>
         </div>
         <div class="rule-card">
           <div class="rule-icon">✅</div>
-          <h3>Approve = Credit Limit</h3>
-          <p>SA menyetujui perpanjangan = memberikan <strong>credit limit</strong> ke Merchant</p>
+          <h3>Auto Approve System</h3>
+          <p>Selama Merchant bertransaksi <strong>di dalam limit</strong> yang diberikan SA, seluruh
+            perpanjangan/cicilan di-Approve otomatis sistem Fintech1000s.</p>
         </div>
         <div class="rule-card">
           <div class="rule-icon">📄</div>
-          <h3>Invoice Restructure</h3>
-          <p>Invoice lama <strong>digantikan</strong>, sistem buat invoice baru dengan interest</p>
+          <h3>Invoice Tergantikan</h3>
+          <p>Invoice Mitra1000s lama <strong>digantikan</strong> menjadi jadwal Invoice Restrukturisasi baru secara
+            mulus.</p>
         </div>
         <div class="rule-card">
           <div class="rule-icon">🔒</div>
-          <h3>Penalti: Blokir Akun</h3>
-          <p>Penalti hanya berupa <strong>blokir akun Mitra1000s</strong> sehingga Merchant tidak bisa bertransaksi lagi
-          </p>
+          <h3>Sanksi Awal: Blokir Transaksi</h3>
+          <p>Merchant gagal bayar di Mitra1000s hanya dikenakan sanksi <strong>blokir transaksi belanja baru</strong>.
+            Pembukaan blokir terjadi setelah Limit mencukupi saldo.</p>
         </div>
         <div class="rule-card">
           <div class="rule-icon">🔄</div>
-          <h3>Re-Extension</h3>
-          <p>Merchant bisa ajukan perpanjangan <strong>berulang</strong>, selama SA approve</p>
+          <h3>Skema Bunga Fleksibel</h3>
+          <p>Fintech1000s membuktikan secara matematis bahwa metode <strong>Kumulatif di Akhir</strong> maupun inovasi
+            <strong>Pay-as-you-go</strong> menghasilkan ROI yang valid untuk kreditur SA.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 12: Money Flow -->
-  <section class="slide" id="slide-11">
+  <!-- SLIDE 16: Money Flow -->
+  <section class="slide" id="slide-15">
     <div class="slide-inner">
       <div class="slide-label">ALUR UANG</div>
       <h2>Settlement <span class="accent">Flow</span></h2>
@@ -370,7 +523,7 @@
         <div class="mv-step mv-mer">
           <div class="mv-emoji">🏪</div>
           <div class="mv-name">Merchant</div>
-          <div class="mv-desc">Bayar cicilan pokok<br>(+ bunga di akhir)</div>
+          <div class="mv-desc">Bayar cicilan POKOK<br>(+ Bunga Lunas) via VA</div>
         </div>
         <div class="mv-connector">
           <div class="mv-arrow-line"></div>
@@ -379,55 +532,55 @@
         <div class="mv-step mv-ft">
           <div class="mv-emoji">📱</div>
           <div class="mv-name">Fintech1000s</div>
-          <div class="mv-desc">Verifikasi<br>pembayaran</div>
+          <div class="mv-desc">Sistem deteksi<br>konfirmasi otomatis</div>
         </div>
         <div class="mv-connector">
           <div class="mv-arrow-line"></div>
-          <div class="mv-arrow-label">Auto transfer</div>
+          <div class="mv-arrow-label">Dana tersalurkan</div>
         </div>
         <div class="mv-step mv-co">
           <div class="mv-emoji">🏛️</div>
           <div class="mv-name">PT. Mitra Seribu Saudara</div>
-          <div class="mv-desc">Terima uang<br>sebagai middleman</div>
+          <div class="mv-desc">Terima uang dan clearing<br>sebagai middleman platform</div>
         </div>
         <div class="mv-connector">
           <div class="mv-arrow-line"></div>
-          <div class="mv-arrow-label">Transfer cicilan</div>
+          <div class="mv-arrow-label">Sistem kliring > SA</div>
         </div>
         <div class="mv-step mv-sa">
           <div class="mv-emoji">🏢</div>
           <div class="mv-name">Selling Agent</div>
-          <div class="mv-desc">Terima pembayaran<br>(as kreditur)</div>
+          <div class="mv-desc">Terima pelunasan cicilan<br>(mendapatkan pokok + profit bunga)</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 13: Closing -->
-  <section class="slide" id="slide-12">
+  <!-- SLIDE 17: Closing -->
+  <section class="slide" id="slide-16">
     <div class="slide-inner cover-slide">
       <div class="cover-badge">SUMMARY</div>
       <h1 class="cover-title" style="font-size:2.8rem">Business Flow<br><span class="accent">Complete</span></h1>
       <div class="cover-divider"></div>
       <div class="closing-grid">
         <div class="cg-item">
-          <div class="cg-num">4</div>
-          <div class="cg-label">Entitas</div>
+          <div class="cg-num">SA</div>
+          <div class="cg-label">Pemberi Credit Limit</div>
         </div>
         <div class="cg-item">
-          <div class="cg-num">4</div>
-          <div class="cg-label">Skenario Flow</div>
+          <div class="cg-num">Auto</div>
+          <div class="cg-label">Approve Extension</div>
         </div>
         <div class="cg-item">
           <div class="cg-num">0.25%</div>
-          <div class="cg-label">Bunga / 7 hari</div>
+          <div class="cg-label">Eskalasi / 7 hari</div>
         </div>
         <div class="cg-item">
           <div class="cg-num">56</div>
-          <div class="cg-label">Hari maks perpanjangan</div>
+          <div class="cg-label">Hari maks kelenturan</div>
         </div>
       </div>
-      <p class="cover-footer">Fintech1000s — Receivables Financing Business Flow</p>
+      <p class="cover-footer">Fintech1000s — Receivables Financing Business Flow & Innovation Ideas</p>
     </div>
   </section>
 
@@ -440,7 +593,7 @@
     </div>
     <button class="zoom-close" onclick="closeZoom()">✕</button>
     <div class="zoom-content" id="zoomContent"></div>
-    <div class="zoom-hint">Klik di luar diagram atau tekan Esc untuk menutup. Scroll atau Drag untuk navigasi.</div>
+    <div class="zoom-hint">Klik di luar diagram atau tekan Esc untuk menutup. Drag untuk navigasi.</div>
   </div>
 
   <script src="flow-deck.js"></script>

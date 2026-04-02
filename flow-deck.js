@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const totalSlides = 13;
+const totalSlides = 18;
 
 function changeSlide(direction) {
   if (document.getElementById('zoomOverlay').classList.contains('active')) return;
@@ -141,6 +141,7 @@ document.getElementById('zoomOverlay').addEventListener('click', (e) => {
 let touchStartX = 0;
 document.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
 document.addEventListener('touchend', (e) => {
+  if (document.getElementById('zoomOverlay').classList.contains('active')) return;
   const diff = touchStartX - e.changedTouches[0].screenX;
   if (Math.abs(diff) > 60) changeSlide(diff > 0 ? 1 : -1);
 });
