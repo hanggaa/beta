@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const totalSlides = 18;
+const totalSlides = 15;
 
 function changeSlide(direction) {
   if (document.getElementById('zoomOverlay').classList.contains('active')) return;
